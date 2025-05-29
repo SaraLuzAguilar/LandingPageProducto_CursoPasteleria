@@ -1,0 +1,234 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #1e1a27;
+  color: #f8f0f8;
+  line-height: 1.6;
+  padding-top: 80px;
+}
+
+/* Header */
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #2a2433;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+#header-img {
+  height: 50px;
+}
+
+#nav-bar {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: #ffc2d1;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+/* Hero Section */
+#hero {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+#hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+#form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+#email {
+  padding: 0.7rem;
+  border: none;
+  border-radius: 6px;
+  width: 250px;
+}
+
+#submit {
+  padding: 0.7rem 1.2rem;
+  background-color: #ffb3c6;
+  color: #2a2433;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#submit:hover {
+  background-color: #ffc2d1;
+}
+
+/* Secciones */
+section {
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+#sobre-nosotros ul {
+  list-style: none;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#sobre-nosotros li {
+  margin: 0.5rem 0;
+}
+
+/* Video */
+#video {
+  width: 90%;
+  max-width: 560px;
+  height: 315px;
+  margin-top: 1rem;
+}
+
+/* Planes */
+#precios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 4rem auto;
+  padding: 0 1rem;
+}
+
+.price-card {
+  background: linear-gradient(145deg, #2e2838, #1d1924);
+  border: 2px solid #ffb3c6;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  width: 280px;
+  text-align: center;
+  color: #fceff9;
+  box-shadow: 0 0 25px rgba(255, 179, 198, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.price-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 35px rgba(255, 179, 198, 0.25);
+}
+
+.price-card h3 {
+  background-color: #ffb3c6;
+  color: #2a2433;
+  padding: 0.7rem;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.price {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+  color: #ffc2d1;
+}
+
+.price-card ul {
+  list-style: none;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  padding-left: 0;
+}
+
+.price-card ul li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.price-card ul li::before {
+  content: "⇒ ";
+  position: absolute;
+  left: 0;
+}
+
+.price-card button {
+  background-color: #ffb3c6;
+  color: #2a2433;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.price-card button:hover {
+  background-color: #ffc2d1;
+}
+
+/* Destacado */
+.price-card.popular::after {
+  content: "★ Más popular";
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  background: #ffc2d1;
+  color: #2a2433;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 12px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  background-color: #473744;
+  color: #eee;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #hero h1 {
+    font-size: 2rem;
+  }
+
+  .price-card {
+    width: 90%;
+  }
+}
